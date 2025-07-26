@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+	<!-- tete -->
+    <circle stroke="#FFD93B" fill="#FFCC4D" stroke-width="4" cx="150" cy="150" r="140"/>
+    
+	<!-- yeux -->
+	<ellipse rx="30" ry="30" fill="white" stroke="white" stroke-width="2" cx="100" cy="120" />
+	<ellipse rx="30" ry="30" fill="white" stroke="white" stroke-width="2" cx="200" cy="120" />
+	<ellipse cx="100" cy="120" rx="15" ry="15" fill="black" stroke="none" />
+	<ellipse cx="200" cy="120" rx="15" ry="15" fill="black" stroke="none" />
+
+	<!-- bouche -->
+	<g transform="translate(150, 200), rotate(0)">
+    	<path d="M 0 0 L -60 0 L -60 5 C -54 55 54 55 60 5 L 60 0 L 0 0"
+			stroke="black" stroke-width="10" fill="black" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M 0 0 L -60 0 L -60 8 C -34 25 34 25 60 8 L 60 0 L 0 0"
+			stroke="none" fill="white" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M -40 30 C -34 45 34 45 40 30 C 34 25 -34 25 -40 30"
+			stroke="none" fill="red" stroke-linecap="round" stroke-linejoin="round"/>
+	</g>
+    <!-- <path d="M 100  210 Q 150 260 200 210" stroke="black" stroke-width="10" fill="none" stroke-linecap="round"/> -->
+</svg>

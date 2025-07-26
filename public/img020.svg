@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+    <circle stroke="#FFD93B" fill="#FFCC4D" stroke-width="4" cx="150" cy="150" r="140"/>
+
+    <path d="M 170 110 Q 200 60 230 110" stroke="black" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M 170 110 Q 200 80 230 110" stroke="black" stroke-width="10" fill="none" stroke-linecap="round"/>
+	
+    <path d="M 70  110 Q 100 60 130 110" stroke="black" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M 70  110 Q 100 80 130 110" stroke="black" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+    <path d="M 150 140 L 60 140 C 70 300 230 300 240 140 L 150 140" stroke="none" fill="#6d1809"/>
+    <path d="M 90 230 C 120 270 180 270 210 230 Q 150 210 90 230" stroke="none" fill="#d63113"/>
+    <path d="M 150 140 L 61 140 Q 61 160 90 160 L 220 160 Q 240 160 239 140 L 150 140" stroke="none" fill="white" />
+    <path d="M 150 140 L 60 140 C 70 300 230 300 240 140 L 150 140" stroke="black" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+
+	<g transform="translate(40, 200)" fill="#58a6eb" stroke="none">
+		<path style="transform: rotate(25deg)" d="M 0 0 C -5 15 -12 20 -10 20 A 15 15 180 1 0 10 20 C 12 20 5 15 0 0" />
+	</g>
+	<g transform="translate(260, 200)" fill="#58a6eb" stroke="none">
+		<path style="transform: rotate(-25deg)" d="M 0 0 C -5 15 -12 20 -10 20 A 15 15 180 1 0 10 20 C 12 20 5 15 0 0" />
+	</g>
+</svg>

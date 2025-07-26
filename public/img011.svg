@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+	<!-- tete -->
+    <circle stroke="#ff5e01" fill="#c04c08" stroke-width="4" cx="150" cy="150" r="135"/>
+    
+	<!-- yeux -->
+	<ellipse cx="100" cy="160" rx="16" ry="20" fill="black" stroke="none" />
+	<ellipse cx="200" cy="160" rx="16" ry="20" fill="black" stroke="none" />
+	<path fill="none" stroke="#0e0a09" stroke-linejoin="round" stroke-width="15" stroke-linecap="round"
+		d="M 180 130 L 180 140 230 120 M 120 130 L 120 140 70 120" />
+
+	<!-- bouche -->
+	<path fill="none" stroke="#0e0a09" stroke-linejoin="round" stroke-width="15" stroke-linecap="round"
+		d="M 120 230 Q 150 220 180 230" />
+</svg>

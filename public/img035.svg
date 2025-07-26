@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+	<!-- tete -->
+    <circle stroke="#FFD93B" fill="#FFCC4D" stroke-width="4" cx="150" cy="150" r="140"/>
+    
+	<!-- yeux -->
+	<ellipse rx="30" ry="40" fill="white" stroke="white" stroke-width="2" cx="100" cy="120" />
+	<ellipse rx="30" ry="40" fill="white" stroke="white" stroke-width="2" cx="200" cy="120" />
+	<ellipse cx="105" cy="135" rx="15" ry="15" fill="black" stroke="none" />
+	<ellipse cx="195" cy="135" rx="15" ry="15" fill="black" stroke="none" />
+	<path fill="none" stroke="#0e0a09" stroke-linejoin="round" stroke-width="15" stroke-linecap="round"
+		d="M 180 80 L 180 85 230 90 M 120 80 L 120 85 70 90" />
+
+	<!-- bouche -->
+    <path d="M 110  210 Q 150 190 190 210" stroke="black" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <path d="M 110  210 Q 150 190 190 210" stroke="black" stroke-width="20" fill="none" stroke-linecap="round"/>
+</svg>

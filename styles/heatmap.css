@@ -1,0 +1,15 @@
+.react-calendar-heatmap .color-empty { fill: #ebebeb}
+.react-calendar-heatmap .color-scale-1 { fill: #e6ccb2; }
+.react-calendar-heatmap .color-scale-2 { fill: #ddb892; }
+.react-calendar-heatmap .color-scale-3 { fill: #b08968; }
+.react-calendar-heatmap .color-scale-4 { fill: #7f5539; }
+
+.heatmap-container {
+  background-color: white; /* White background for the card */
+  border-radius: 15px; /* Rounded corners */
+  margin: 2em;
+  padding: 1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 80vw;
+}

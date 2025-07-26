@@ -27,6 +27,7 @@ model User {
   currentStreak Int            @default(0)
   longestStreak Int            @default(0)
   lastPooDate   DateTime?
+  moods         Mood[]
 }
 
 model Poo {
@@ -61,4 +62,20 @@ model UserAchievement {
 
   @@unique([userId, achievementId])
   @@index([userId])
+}
+
+model emoji {
+  id          String      @id @default(cuid())
+  mood        Int         // 1-5 scale
+  faceLink    String?     //Link to the face svg
+  note        String?     @db.Text
+  moods       Mood[]      // Relation to Mood model
+}
+
+model Mood{
+  id          String      @id @default(cuid())
+  emojiId    String
+  userId     String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emoji emoji @relation(fields: [emojiId], references: [id], onDelete: Cascade)
 }

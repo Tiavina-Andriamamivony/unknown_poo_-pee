@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../lib/generated/prisma"
@@ -12,4 +6,59 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+enum PooConsistency {
+  HARD
+  SMOOTH
+  DIARRHEA
+  LABOR_LIKE
+  DYSENTERY
+}
+
+model User {
+  id            String           @id
+  email         String          @unique
+  name          String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  poos          Poo[]
+  achievements  UserAchievement[]
+  currentStreak Int            @default(0)
+  longestStreak Int            @default(0)
+  lastPooDate   DateTime?
+}
+
+model Poo {
+  id           String         @id @default(cuid())
+  userId       String
+  consistency  PooConsistency
+  note         String?        @db.Text
+  poopedAt     DateTime       
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, poopedAt])
+}
+
+model Achievement {
+  id          String            @id @default(cuid())
+  name        String            @unique
+  description String            @db.Text
+  imageUrl    String?
+  createdAt   DateTime          @default(now())
+  users       UserAchievement[]
+}
+
+model UserAchievement {
+  id            String      @id @default(cuid())
+  userId        String
+  achievementId String
+  unlockedAt    DateTime    @default(now())
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
 }

@@ -15,6 +15,8 @@ const geistSans = Geist({
   subsets: ['latin'],
 })
 import { ModeToggle } from '@/components/toggle-button'
+import DashboardPage from './dashboard/page'
+import FormPage from './form/page'
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
@@ -35,7 +37,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <header className="flex justify-center items-center p-4 gap-4 h-16 w-auto">
             <ModeToggle />
             <SignedOut>
@@ -51,7 +53,10 @@ export default function RootLayout({
             </SignedIn>
           </header>
           {children}
-        </ThemeProvider>
+        </ThemeProvider> */}
+        {
+          <DashboardPage />
+        }
         </body>
       </html>
     </ClerkProvider>

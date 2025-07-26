@@ -1,0 +1,171 @@
+/* .sidebar {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #a59581;
+    width: 100px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 0;
+    background-color: rgb(49, 75, 49);
+    height: 60px;
+}
+
+.dashboard-content {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    left: 100px;
+    display: grid;
+    grid-template-columns:60% 40%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.statistics-component {
+    grid-row: span 2;
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.statistics-component > div {
+    width: 100%;
+    height: inherit;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.mood-component > div {
+    width: 100%;
+    height: inherit;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.calendar-component > div {
+    width: 100%;
+    height: inherit;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.mood-component {
+    
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.calendar-component {
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+} */
+
+.dashboard-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgb(49, 75, 49);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.main-area {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.sidebar {
+    background-color: #a59581;
+    width: 100px;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.dashboard-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.statistics-component {
+    grid-row: span 2;
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.statistics-component > div,
+.mood-component > div,
+.calendar-component > div {
+    width: 100%;
+    min-height: 120px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.mood-component,
+.calendar-component {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    .statistics-component {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+    .main-area {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        min-width: 0;
+        height: 50px;
+        padding-top: 0;
+        justify-content: center;
+    }
+    .dashboard-content {
+        padding: 8px;
+        gap: 8px;
+    }
+}

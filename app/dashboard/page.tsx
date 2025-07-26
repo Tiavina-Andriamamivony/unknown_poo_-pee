@@ -24,7 +24,10 @@
 //     );
 //   }
   
+import { Square } from 'lucide-react';
 import './layout.css'
+import { SquarePrompt } from '@/components/mood';
+import PoopHeatmap from '@/components/PoopHeatmap';
 
 export default function DashboardPage() {
     return (
@@ -41,10 +44,14 @@ export default function DashboardPage() {
                         <div></div>
                     </div>
                     <div className='mood-component'>
-                        <div></div>
+                        <div>
+                            <SquarePrompt initialAct="neutral" />
+                        </div>
                     </div>
                     <div className='calendar-component'>
-                        <div></div>
+                        <div>
+                            <PoopHeatmap />
+                        </div>
                     </div>
                 </section>
             </div>

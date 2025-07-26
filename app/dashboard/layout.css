@@ -125,9 +125,12 @@
 .calendar-component > div {
     width: 100%;
     min-height: 120px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     border-radius: 10px;
     background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mood-component,
